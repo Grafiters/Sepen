@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="1dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:id="@+id/card_item">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/provinsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="provinsi"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"/>
+        <TextView
+            android:id="@+id/kota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="kota"
+            android:layout_below="@+id/provinsi"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/kecamatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="kecamatn"
+            android:layout_below="@+id/kota"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/kelurahan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="kecamatan"
+            android:layout_below="@+id/kecamatan"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/rw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="rw"
+            android:layout_below="@+id/kelurahan"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/rt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="rt"
+            android:layout_below="@+id/rw"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/k_keluarga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="kepala keluarga"
+            android:layout_below="@+id/rt"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/jml_penduduk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="jumlah penduduk"
+            android:layout_below="@+id/k_keluarga"
+            android:layout_marginTop="5dp"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
