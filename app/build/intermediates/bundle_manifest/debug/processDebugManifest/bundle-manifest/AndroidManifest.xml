@@ -21,9 +21,10 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+        <activity android:name="com.example.sepen.main.MainActivity" />
         <activity android:name="com.example.sepen.data_penduduk" />
         <activity android:name="com.example.sepen.editor.inputPenduduk" />
-        <activity android:name="com.example.sepen.main.MainActivity" >
+        <activity android:name="com.example.sepen.login_user" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

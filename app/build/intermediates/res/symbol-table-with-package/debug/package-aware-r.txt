@@ -1199,6 +1199,7 @@ id line1
 id line3
 id listMode
 id list_item
+id login
 id masked
 id message
 id middle
@@ -1221,6 +1222,7 @@ id parallax
 id parent
 id parentPanel
 id parent_matrix
+id password
 id percent
 id pin
 id progress_circular
@@ -1313,6 +1315,8 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id user
+id username
 id view_offset_helper
 id visible
 id withText
@@ -1374,6 +1378,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_data_penduduk
 layout activity_input_penduduk
+layout activity_login_user
 layout activity_main
 layout custom_dialog
 layout design_bottom_navigation_item

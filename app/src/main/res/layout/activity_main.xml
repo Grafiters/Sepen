@@ -8,6 +8,14 @@
     android:orientation="vertical"
     android:gravity="center">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user"
+        android:textAlignment="center"
+        android:textSize="15dp"
+        android:layout_marginBottom="10dp"/>
+
     <Button
         android:id="@+id/input"
         android:layout_width="wrap_content"
@@ -23,8 +31,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
-        android:text="input"
-        android:textColor="#ffffff"/>
+        android:text="show"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="10dp"/>
+
 
 
 </LinearLayout>

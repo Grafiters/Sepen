@@ -1,6 +1,7 @@
 package com.example.sepen.api;
 
 import com.example.sepen.model.Penduduk;
+import com.example.sepen.model.User;
 
 import java.util.List;
 
@@ -26,4 +27,11 @@ public interface ApiInterface {
 
     @GET("showData.php")
     Call<List<Penduduk>>getData();
+
+    @FormUrlEncoded
+    @POST("loginUser.php")
+    Call<User>loginUser(
+          @Field("username")String username,
+          @Field("password")String password
+    );
 }

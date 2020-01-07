@@ -6,54 +6,57 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="19"
-8-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml
+8-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml
+9-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml:6:5-67
-11-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml:6:22-64
+11-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:6:5-67
+11-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:6:22-64
 12
 13    <application
-13-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml:8:5-27:19
+13-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:8:5-28:19
 14        android:allowBackup="true"
-14-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml:10:9-35
+14-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:9:9-35
 15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-15-->[androidx.core:core:1.1.0] C:\Users\alone\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:18-86
+15-->[androidx.core:core:1.1.0] /home/grafiters/.gradle/caches/transforms-2/files-2.1/e9dab9c67c1ee3668e0bbf86c6d8cbd8/core-1.1.0/AndroidManifest.xml:24:18-86
 16        android:debuggable="true"
 17        android:icon="@mipmap/ic_launcher"
-17-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml:11:9-43
+17-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:10:9-43
 18        android:label="@string/app_name"
-18-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml:12:9-41
+18-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:11:9-41
 19        android:roundIcon="@mipmap/ic_launcher_round"
-19-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml:13:9-54
+19-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:12:9-54
 20        android:supportsRtl="true"
-20-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml:14:9-35
+20-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:13:9-35
 21        android:testOnly="true"
 22        android:theme="@style/AppTheme"
-22-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml:15:9-40
+22-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:14:9-40
 23        android:usesCleartextTraffic="true" >
-23-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml:9:9-44
-24        <activity android:name="com.example.sepen.data_penduduk" />
-24-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml:18:9-51
-24-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml:18:19-48
-25        <activity android:name="com.example.sepen.editor.inputPenduduk" />
-25-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml:19:9-58
-25-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml:19:19-55
-26        <activity android:name="com.example.sepen.main.MainActivity" >
-26-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml:20:9-26:20
-26-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml:20:19-52
-27            <intent-filter>
-27-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml:21:13-25:29
-28                <action android:name="android.intent.action.MAIN" />
-28-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml:22:17-69
-28-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml:22:25-66
-29
-30                <category android:name="android.intent.category.LAUNCHER" />
-30-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml:24:17-77
-30-->D:\tugas\Sepen\app\src\main\AndroidManifest.xml:24:27-74
-31            </intent-filter>
-32        </activity>
-33    </application>
-34
-35</manifest>
+23-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:15:9-44
+24        <activity android:name="com.example.sepen.main.MainActivity" />
+24-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:18:9-54
+24-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:18:19-52
+25        <activity android:name="com.example.sepen.data_penduduk" />
+25-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:19:9-51
+25-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:19:19-48
+26        <activity android:name="com.example.sepen.editor.inputPenduduk" />
+26-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:20:9-58
+26-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:20:19-55
+27        <activity android:name="com.example.sepen.login_user" >
+27-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:21:9-27:20
+27-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:21:19-45
+28            <intent-filter>
+28-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:22:13-26:29
+29                <action android:name="android.intent.action.MAIN" />
+29-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:23:17-69
+29-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:23:25-66
+30
+31                <category android:name="android.intent.category.LAUNCHER" />
+31-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:25:17-77
+31-->/home/grafiters/Documents/tugas/Sepen/app/src/main/AndroidManifest.xml:25:27-74
+32            </intent-filter>
+33        </activity>
+34    </application>
+35
+36</manifest>
