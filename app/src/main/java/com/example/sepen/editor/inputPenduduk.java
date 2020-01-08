@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -74,6 +75,7 @@ public class inputPenduduk extends AppCompatActivity implements editorView {
 //                saveNotes(provinsi, kota, kecamatan, kelurahan, rw, rt, k_keluarga, jml_penduduk);
             }
         });
+
     }
 
     @Override
@@ -93,11 +95,28 @@ public class inputPenduduk extends AppCompatActivity implements editorView {
         user1=tugas.getText().toString();
         i.putExtra("",user1);
         startActivity(i);
-        finish();
+//        finish();
     }
 
     @Override
     public void onAddError(String message) {
         Toast.makeText(inputPenduduk.this, message, Toast.LENGTH_SHORT).show();
     }
+
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        if (event.getAction() == KeyEvent.ACTION_DOWN) {
+//            switch (keyCode) {
+//                case KeyEvent.KEYCODE_BACK:
+//                    if (mWebView.canGoBack()) {
+//                        mWebView.goBack();
+//                    } else {
+//                        finish();
+//                    }
+//                    return true;
+//            }
+//
+//        }
+//        return super.onKeyDown(keyCode, event);
+//    }
 }

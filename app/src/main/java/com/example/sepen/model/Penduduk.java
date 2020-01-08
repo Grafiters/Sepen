@@ -28,6 +28,8 @@ public class Penduduk {
     @SerializedName("success")private Boolean success;
     @Expose
     @SerializedName("message")private String message;
+    @Expose
+    @SerializedName("hitung")private int hitung;
 
     public int getId() {
         return id;
@@ -123,5 +125,13 @@ public class Penduduk {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public int getHitung() {
+        return hitung;
+    }
+
+    public void setHitung(int hitung) {
+        this.hitung = hitung;
     }
 }

@@ -1,4 +1,4 @@
-#Wed Jan 08 18:51:52 ICT 2020
-base.0=D\:\\tugas\\Sepen\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Thu Jan 09 02:41:10 WIB 2020
+base.0=/home/grafiters/Documents/tugas/Sepen/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

@@ -5,69 +5,148 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".editor.inputPenduduk"
-    android:layout_margin="10dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#1976D2">
 
-    <TextView
-        android:id="@+id/petugas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"/>
-
-    <EditText
-        android:id="@+id/provinsi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        />
-    <EditText
-        android:id="@+id/kota"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"/>
-    <EditText
-        android:id="@+id/kecamatan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"/>
-    <EditText
-        android:id="@+id/kelurahan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <EditText
-            android:id="@+id/rw"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"/>
-        <EditText
-            android:id="@+id/rt"
+        android:layout_height="150dp"
+        android:orientation="vertical">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_marginTop="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sensus Penduduk"
+                android:textColor="#ffffff"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
     </LinearLayout>
-    <EditText
-        android:id="@+id/k_keluarga"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"/>
-    <EditText
-        android:id="@+id/jml_penduduk"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"/>
 
 
-    <Button
-        android:id="@+id/submit"
-        android:layout_gravity="center"
-        android:layout_marginTop="25sp"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="submit"
-        android:background="@color/colorAccent"/>
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/petugas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="#ffffff"
+            android:textSize="15dp"
+            android:text="Petugas"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="425dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="25dp"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/provinsi"
+                android:hint="Provinsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                />
+            <EditText
+                android:id="@+id/kota"
+                android:hint="Kota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"/>
+            <EditText
+                android:id="@+id/kecamatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:hint="Kecamatan"/>
+            <EditText
+                android:id="@+id/kelurahan"
+                android:hint="Kelurahan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:hint="RW"
+                    android:id="@+id/rw"
+                    android:layout_width="150dp"
+                    android:inputType="number"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"/>
+                <EditText
+                    android:inputType="number"
+                    android:id="@+id/rt"
+                    android:hint="RT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"/>
+            </LinearLayout>
+            <EditText
+                android:inputType="number"
+                android:hint="Kepala Keluarga"
+                android:id="@+id/k_keluarga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"/>
+            <EditText
+                android:inputType="number"
+                android:id="@+id/jml_penduduk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Total Penduduk"
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="submit"
+                android:textColor="#ffffff"
+                android:background="@color/colorAccent"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rekap Data Penduduk di Daerah Indonesia"
+            android:textColor="#ffffff"
+            />
+
+    </LinearLayout>
 </LinearLayout>

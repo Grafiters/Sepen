@@ -37,9 +37,6 @@ public interface ApiInterface {
     );
 
     @GET("showDataRukun.php")
-    Call<List<Penduduk>>getResult(
-            @Field("hitung")int hitung
-    );
+    Call<Penduduk>resultData();
 
-//    @GET("showDataRukun")
 }

@@ -1,10 +1,15 @@
 package com.example.sepen.main;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.BoringLayout;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,7 +24,17 @@ import com.example.sepen.editor.inputPenduduk;
 import com.example.sepen.login_user;
 import com.example.sepen.model.Penduduk;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
+
+import javax.xml.transform.Result;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -27,10 +42,13 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView user, resultkeluarga;
-    String user1, result1;
+    TextView user, resultkeluarga, resultpenduduk;
+    String user1;
+    int result1, totalPenduduk, totalkeluarga;
     Button input, show, login;
+    List<Penduduk> penduduk = new ArrayList<>();
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,9 +59,20 @@ public class MainActivity extends AppCompatActivity {
         login = (Button)findViewById(R.id.login);
         user = (TextView)findViewById(R.id.user);
         resultkeluarga = (TextView)findViewById(R.id.resultkeluarga);
+        resultpenduduk = (TextView)findViewById(R.id.resultpenduduk);
 
         user1=getIntent().getExtras().getString("");
-        user.setText(user1);
+        user.setText("Hi "+user1);
+
+//        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+//            totalPenduduk = penduduk.stream().filter(o -> o.getJml_penduduk()>10).mapToInt(Penduduk::getJml_penduduk).sum();
+//            resultpenduduk.setText(Integer.toString(totalPenduduk));
+//        }
+//        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+//            totalkeluarga= penduduk.stream().filter(o -> o.getK_keluarga()>10).mapToInt(Penduduk::getK_keluarga).sum();
+//            resultkeluarga.setText(Integer.toString(totalkeluarga));
+//        }
+
 
         input.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,5 +91,29 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+        Call<List<Penduduk>> call = apiInterface.getData();
+        call.enqueue(new Callback<List<Penduduk>>() {
+            @Override
+            public void onResponse(Call<List<Penduduk>> call, Response<List<Penduduk>> response) {
+                if (response.isSuccessful() && response.body() != null){
+                    result1=response.body().size();
+                    for (int i = 0 ; i<result1; i++){
+                        totalkeluarga += response.body().get(i).getK_keluarga();
+                        totalPenduduk += response.body().get(i).getJml_penduduk();
+                    }
+                    resultkeluarga.setText(Integer.toString(totalkeluarga));
+                    resultpenduduk.setText(Integer.toString(totalPenduduk));
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Penduduk>> call, Throwable t) {
+
+            }
+        });
+
     }
+
 }

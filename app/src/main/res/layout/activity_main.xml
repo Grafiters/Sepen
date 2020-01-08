@@ -6,40 +6,158 @@
     android:layout_height="match_parent"
     tools:context=".main.MainActivity"
     android:orientation="vertical"
-    android:gravity="center">
+    android:background="#1976D2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_marginTop="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sensus Penduduk"
+                android:textColor="#ffffff"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/user"
-        android:textAlignment="center"
-        android:textSize="15dp"
-        android:layout_marginBottom="10dp"/>
-
-    <Button
-        android:id="@+id/input"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
-        android:text="input"
-        android:textColor="#ffffff"
-        android:layout_marginBottom="10dp"/>
-
-    <Button
-        android:id="@+id/show"
+        android:text="user"
         android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
-        android:text="show"
+        android:layout_marginLeft="50dp"
+        android:textSize="15sp"
         android:textColor="#ffffff"
+        android:textStyle="normal"
         android:layout_marginBottom="10dp"/>
 
-    <TextView
-        android:textSize="15sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/resultkeluarga"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                tools:ignore="Suspicious0dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:text="Total Keluarga"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textStyle="normal"/>
+                <TextView
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textStyle="normal"
+                    android:id="@+id/resultkeluarga"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                tools:ignore="Suspicious0dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:text="Total Penduduk"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textStyle="normal"/>
+                <TextView
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textStyle="normal"
+                    android:id="@+id/resultpenduduk"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="input"
+            android:textColor="#ffffff"
+            android:layout_marginRight="10dp"/>
+
+        <Button
+            android:id="@+id/show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="show"
+            android:textColor="#ffffff"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"/>
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="logout"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="50dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rekap Data Penduduk di Daerah Indonesia"
+            android:textColor="#ffffff"
+            />
+
+    </LinearLayout>
 
 </LinearLayout>
