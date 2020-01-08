@@ -18,11 +18,11 @@ public class editorPresenter {
     public editorPresenter(editorView view){
         this.view = view;
     }
-    void saveNotes(final String provinsi, final String kota, final String kecamatan, final String kelurahan, final int rw, final int rt, final int k_keluarga, final int jml_penduduk){
+    void saveNotes(final String provinsi, final String kota, final String kecamatan, final String kelurahan, final int rw, final int rt, final int k_keluarga, final int jml_penduduk, final String petugas){
         view.showProgress();
 
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
-        Call<Penduduk> call = apiInterface.simpanData(provinsi, kota, kecamatan, kelurahan, rw, rt, k_keluarga, jml_penduduk);
+        Call<Penduduk> call = apiInterface.simpanData(provinsi, kota, kecamatan, kelurahan, rw, rt, k_keluarga, jml_penduduk, petugas);
 
         call.enqueue(new Callback<Penduduk>() {
             @Override
@@ -32,9 +32,6 @@ public class editorPresenter {
                     Boolean success = response.body().getSuccess();
                     if (success){
                         view.onAddSuccess(response.body().getMessage());
-                    }else {
-                        view.onAddError(response.body().getMessage());
-//                        Toast.makeText(inputPenduduk.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }
             }

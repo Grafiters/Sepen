@@ -22,7 +22,8 @@ public interface ApiInterface {
             @Field("rw")int rw,
             @Field("rt")int rt,
             @Field("k_keluarga")int k_keluarga,
-            @Field("jml_penduduk")int jml_penduduk
+            @Field("jml_penduduk")int jml_penduduk,
+            @Field("petugas")String petugas
     );
 
     @GET("showData.php")
@@ -34,4 +35,6 @@ public interface ApiInterface {
           @Field("username")String username,
           @Field("password")String password
     );
+
+//    @GET("showDataRukun")
 }

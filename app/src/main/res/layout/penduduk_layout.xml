@@ -75,6 +75,13 @@
             android:text="jumlah penduduk"
             android:layout_below="@+id/k_keluarga"
             android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/tugas1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="petugas"
+            android:layout_below="@+id/jml_penduduk"
+            android:layout_marginTop="5dp"/>
 
     </RelativeLayout>
 

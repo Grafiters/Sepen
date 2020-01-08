@@ -23,6 +23,8 @@ public class Penduduk {
     @Expose
     @SerializedName("jml_penduduk")private int jml_penduduk;
     @Expose
+    @SerializedName("petugas")private String petugas;
+    @Expose
     @SerializedName("success")private Boolean success;
     @Expose
     @SerializedName("message")private String message;
@@ -97,6 +99,14 @@ public class Penduduk {
 
     public void setJml_penduduk(int jml_penduduk) {
         this.jml_penduduk = jml_penduduk;
+    }
+
+    public String getPetugas() {
+        return petugas;
+    }
+
+    public void setPetugas(String petugas) {
+        this.petugas = petugas;
     }
 
     public Boolean getSuccess() {

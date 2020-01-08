@@ -48,6 +48,7 @@ public class PendudukAdapter extends RecyclerView.Adapter<PendudukAdapter.Recycl
         holder.tangga.setText(penduduk.getRt()+"");
         holder.keluarga.setText(penduduk.getK_keluarga()+"");
         holder.penduduk.setText(penduduk.getJml_penduduk()+"");
+        holder.tugas.setText(penduduk.getPetugas());
     }
 
     @Override
@@ -56,7 +57,7 @@ public class PendudukAdapter extends RecyclerView.Adapter<PendudukAdapter.Recycl
     }
 
     public class RecyclerViewAdapter extends RecyclerView.ViewHolder implements View.OnClickListener{
-        TextView prov, kot, kec, kel, warga, tangga, keluarga, penduduk;
+        TextView prov, kot, kec, kel, warga, tangga, keluarga, penduduk, tugas;
         CardView cardView;
         ItemClickListener itemClickListener;
         public RecyclerViewAdapter(@NonNull View itemView, ItemClickListener itemClickListener) {
@@ -71,6 +72,7 @@ public class PendudukAdapter extends RecyclerView.Adapter<PendudukAdapter.Recycl
             tangga = itemView.findViewById(R.id.rt);
             keluarga = itemView.findViewById(R.id.k_keluarga);
             penduduk = itemView.findViewById(R.id.jml_penduduk);
+            tugas = itemView.findViewById(R.id.tugas1);
 
             cardView = itemView.findViewById(R.id.card_item);
             cardView.setOnClickListener(this);

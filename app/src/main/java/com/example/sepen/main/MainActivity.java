@@ -36,7 +36,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, inputPenduduk.class);
+                user1=user.getText().toString();
+                i.putExtra("",user1);
                 startActivity(i);
+                finish();
             }
         });
         show.setOnClickListener(new View.OnClickListener() {
