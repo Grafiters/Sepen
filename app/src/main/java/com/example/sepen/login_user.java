@@ -55,7 +55,7 @@ public class login_user extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(),""+response.body().getError(),Toast.LENGTH_SHORT).show();
                         }else {
                             progressDialog.dismiss();
-                            Toast.makeText(getApplicationContext(),"success",Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(getApplicationContext(),"success",Toast.LENGTH_SHORT).show();
                             Intent i = new Intent(login_user.this, MainActivity.class);
                             user1=username.getText().toString();
                             i.putExtra("",user1);

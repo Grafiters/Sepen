@@ -36,5 +36,10 @@ public interface ApiInterface {
           @Field("password")String password
     );
 
+    @GET("showDataRukun.php")
+    Call<List<Penduduk>>getResult(
+            @Field("hitung")int hitung
+    );
+
 //    @GET("showDataRukun")
 }
