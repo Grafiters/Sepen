@@ -58,7 +58,31 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:weightSum="2">
+            android:weightSum="3">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                tools:ignore="Suspicious0dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:text="Total Kelurahan"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textStyle="normal"/>
+                <TextView
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textStyle="normal"
+                    android:id="@+id/resultkelurahan"/>
+
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -74,6 +98,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="#000000"
                     android:textStyle="normal"/>
+
                 <TextView
                     android:textSize="15sp"
                     android:layout_width="wrap_content"
@@ -81,6 +106,7 @@
                     android:textColor="#000000"
                     android:textStyle="normal"
                     android:id="@+id/resultkeluarga"/>
+
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"

@@ -1,40 +1,24 @@
 package com.example.sepen.main;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.text.BoringLayout;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.sepen.R;
 import com.example.sepen.api.ApiClient;
 import com.example.sepen.api.ApiInterface;
 import com.example.sepen.data_penduduk;
 import com.example.sepen.editor.inputPenduduk;
-import com.example.sepen.login_user;
 import com.example.sepen.model.Penduduk;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
-
-import javax.xml.transform.Result;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -42,9 +26,9 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView user, resultkeluarga, resultpenduduk;
+    TextView user, resultkeluarga, resultpenduduk, reslutKelurahan;
     String user1;
-    int result1, totalPenduduk, totalkeluarga;
+    int result1, totalPenduduk, totalkeluarga, totalKelurahan;
     Button input, show, login;
     List<Penduduk> penduduk = new ArrayList<>();
 
@@ -60,9 +44,16 @@ public class MainActivity extends AppCompatActivity {
         user = (TextView)findViewById(R.id.user);
         resultkeluarga = (TextView)findViewById(R.id.resultkeluarga);
         resultpenduduk = (TextView)findViewById(R.id.resultpenduduk);
+        reslutKelurahan = (TextView)findViewById(R.id.resultkelurahan);
 
         user1=getIntent().getExtras().getString("");
-        user.setText("Hi "+user1);
+        user.setText(user1);
+
+//        long count;
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+//            count = penduduk.stream().filter(o-> Boolean.parseBoolean(o.getKelurahan())).mapToInt(Penduduk::getHitung).count();
+//            reslutKelurahan.setText(Double.toString(count));
+//        }
 
 //        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
 //            totalPenduduk = penduduk.stream().filter(o -> o.getJml_penduduk()>10).mapToInt(Penduduk::getJml_penduduk).sum();
@@ -72,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
 //            totalkeluarga= penduduk.stream().filter(o -> o.getK_keluarga()>10).mapToInt(Penduduk::getK_keluarga).sum();
 //            resultkeluarga.setText(Integer.toString(totalkeluarga));
 //        }
-
 
         input.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,9 +92,11 @@ public class MainActivity extends AppCompatActivity {
                     for (int i = 0 ; i<result1; i++){
                         totalkeluarga += response.body().get(i).getK_keluarga();
                         totalPenduduk += response.body().get(i).getJml_penduduk();
+                        totalKelurahan += 1;
                     }
                     resultkeluarga.setText(Integer.toString(totalkeluarga));
                     resultpenduduk.setText(Integer.toString(totalPenduduk));
+                    reslutKelurahan.setText(Integer.toString(totalKelurahan));
                 }
             }
 

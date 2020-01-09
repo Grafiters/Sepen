@@ -39,7 +39,7 @@ public class editorPresenter {
             @Override
             public void onFailure(@NonNull Call<Penduduk> call, @NonNull Throwable t) {
                 view.hideProgress();
-                view.onAddSuccess(t.getLocalizedMessage());
+                view.onAddError(t.getLocalizedMessage());
 //                Toast.makeText(inputPenduduk.this, t.getLocalizedMessage(),Toast.LENGTH_SHORT).show();
             }
         });

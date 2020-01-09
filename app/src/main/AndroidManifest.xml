@@ -15,9 +15,9 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="m">
+        <activity android:name=".editor.inputPenduduk" />
         <activity android:name=".main.MainActivity"/>
         <activity android:name=".data_penduduk" />
-        <activity android:name=".editor.inputPenduduk" />
         <activity android:name=".login_user">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

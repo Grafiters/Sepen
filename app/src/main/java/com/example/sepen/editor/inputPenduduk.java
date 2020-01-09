@@ -90,7 +90,7 @@ public class inputPenduduk extends AppCompatActivity implements editorView {
 
     @Override
     public void onAddSuccess(String message) {
-        Toast.makeText(inputPenduduk.this, message, Toast.LENGTH_SHORT).show();
+        Toast.makeText(inputPenduduk.this, "success input", Toast.LENGTH_SHORT).show();
         Intent i = new Intent(inputPenduduk.this, MainActivity.class);
         user1=tugas.getText().toString();
         i.putExtra("",user1);
@@ -100,7 +100,7 @@ public class inputPenduduk extends AppCompatActivity implements editorView {
 
     @Override
     public void onAddError(String message) {
-        Toast.makeText(inputPenduduk.this, message, Toast.LENGTH_SHORT).show();
+        Toast.makeText(inputPenduduk.this, "data error atau sudah ada", Toast.LENGTH_SHORT).show();
     }
 
 //    @Override
